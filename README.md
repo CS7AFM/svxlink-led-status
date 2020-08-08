@@ -41,6 +41,7 @@ vous pouvez tester le bon fonctionnement avant d'aller plus loin :
 cd /home
 
 bash led.sh
+
 bash svxstatut.sh
 
 3 - installation des services :
