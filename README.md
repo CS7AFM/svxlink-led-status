@@ -10,18 +10,29 @@ led rouge gpio 22
 led orange clignotante gpio 23
 libre à vous de changer les gpio mais vous devrez modifier les scripts bash.
 si vous souhaiter augmenter ou diminuer la vitesse de clignotement 
-il suffit d'éditer le script svxstatut.sh et de vopus rendre :
-ligne n temps d'illulination 
-lignr n temps d'extinction 
+il suffit d'éditer le script svxstatut.sh et de vous rendre :
+ligne n°24 = temps d'illulination 
+lignr n°26 = temps d'extinction 
 
-2 - copie des fichiers et activation de s
+2 - copie des fichiers et test de bon fonctionnement
 led.sh et svxstatut.sh seront copiés dans /home
-il convient d'éditer le ficher led.sh à la ligne n°
+puis les rendre exécutables : 
+chmod +x led.sh
+chmod +x svxstatut.sh
+il convient d'éditer le ficher led.sh à la ligne n°50
 et remplacer XXXXX par votre call ex:F4XYZ
 (la prochaine version ira récupérer directement le call dans /etc/spotnik/config.json ...)
 
+vous pouvez tester le bon fonctionnement avant d'aller plus loin :
+
+cd /home 
+bash led.sh
+bash svxstatut.sh
+
+3 - installation des services :
+
 Les scripts seront alors lancés en mode service avec system.d: 
-copier les deux fichierS led.service et svxstatut.service dans /etc/systemd/system
+copier les deux fichiers led.service et svxstatut.service dans /etc/systemd/system
 pour les activer : 
 sudo systemctl enable led.service 
 sudo systemctl enable svxstatus.service
