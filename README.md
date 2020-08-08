@@ -9,6 +9,7 @@ led verte gpio 27
 led rouge gpio 22
 led orange clignotante gpio 23
 libre à vous de changer les gpio mais vous devrez modifier les scripts bash.
+
 si vous souhaiter augmenter ou diminuer la vitesse de clignotement 
 il suffit d'éditer le script svxstatut.sh et de vous rendre :
 ligne n°24 = temps d'illulination 
