@@ -17,11 +17,14 @@ lignr n°26 = temps d'extinction
 
 2 - copie des fichiers et test de bon fonctionnement
 led.sh et svxstatut.sh seront copiés dans /home
-puis les rendre exécutables : 
+puis les rendre exécutables :
+
 chmod +x led.sh
 chmod +x svxstatut.sh
+
 il convient d'éditer le ficher led.sh à la ligne n°50
 et remplacer XXXXX par votre call ex:F4XYZ
+
 (la prochaine version ira récupérer directement le call dans /etc/spotnik/config.json ...)
 
 vous pouvez tester le bon fonctionnement avant d'aller plus loin :
