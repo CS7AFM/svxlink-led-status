@@ -22,7 +22,9 @@ ligne n°24 = temps d'illulination
 ligne n°26 = temps d'extinction 
 
 2 - copie des fichiers et test de bon fonctionnement
+
 led.sh et svxstatut.sh seront copiés dans /home
+
 puis les rendre exécutables :
 
 chmod +x led.sh
@@ -50,23 +52,25 @@ pour les activer :
 
 sudo systemctl enable led.service 
 
-sudo systemctl enable svxstatus.service
+sudo systemctl enable svxstatut.service
 
 puis 
 
 sudo systemctl start led.service 
 
-sudo systemctl start svxstatus.service
+sudo systemctl start svxstatut.service
 
 pour controler le bon fonctionnement :
 
 sudo systemctl statut led.service 
 
-sudo systemctl statut svxstatus.service
+sudo systemctl statut svxstatut.service
 
  Commentaires : deux scripts au lieu d'un seul ?
+ 
 Le script svxstatut.sh en plus de controler l'état du process de svxlink fait clignoter une led
-et de facto il y des sleep. 
+et de facto il y des sleep.
+
 Ces pauses impactaient la réactivitée quelques fois de la détectection rx et tx.
 
 Un portage en python3 diminuerait grandement l'occupation cpu même si celle-ci demeure très basse ...
