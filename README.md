@@ -28,6 +28,7 @@ led.sh et svxstatut.sh seront copiés dans /home
 puis les rendre exécutables :
 
 chmod +x led.sh
+
 chmod +x svxstatut.sh
 
 il convient d'éditer le ficher led.sh à la ligne n°50
