@@ -74,4 +74,11 @@ et de facto il y des sleep.
 
 Ces pauses impactaient la réactivitée quelques fois de la détectection rx et tx.
 
+Et, enfin certains pourraient se demander pourquoi ne pas lire directement l'état des gpio de svxlink afin de savoir si l'on est en rx ou tx ?
+
+Pour deux raisons, la première est que mon système est quelque peu différents pour la gestion tx et rx, et la deuxième est tout simple comme vous pourrez le constater dans les commentaires dans les scripts : 
+
+on y apprend beaucoup de notions et de commandes ;)
+
+
 Un portage en python3 diminuerait grandement l'occupation cpu même si celle-ci demeure très basse ...
