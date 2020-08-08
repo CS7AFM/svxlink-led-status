@@ -17,7 +17,7 @@ libre à vous de changer les gpio mais vous devrez modifier les scripts bash.
 si vous souhaiter augmenter ou diminuer la vitesse de clignotement 
 il suffit d'éditer le script svxstatut.sh et de vous rendre :
 
-ligne n°24 = temps d'illulination 
+ligne n°24 = temps d'illumination 
 
 ligne n°26 = temps d'extinction 
 
