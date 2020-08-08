@@ -36,20 +36,31 @@ bash svxstatut.sh
 
 3 - installation des services :
 
-Les scripts seront alors lancés en mode service avec system.d: 
+Les scripts seront alors lancés en mode service avec system.d:
+
 copier les deux fichiers led.service et svxstatut.service dans /etc/systemd/system
+
 pour les activer : 
+
 sudo systemctl enable led.service 
+
 sudo systemctl enable svxstatus.service
+
 puis 
+
 sudo systemctl start led.service 
+
 sudo systemctl start svxstatus.service
+
 pour controler le bon fonctionnement :
+
 sudo systemctl statut led.service 
+
 sudo systemctl statut svxstatus.service
 
-commentaires : deux scripts au lieu d'un seul ?
+ Commentaires : deux scripts au lieu d'un seul ?
 Le script svxstatut.sh en plus de controler l'état du process de svxlink fait clignoter une led
-et de facto il y des sleep. Ces pauses impactaient la réactivitée quelques fois de la détectection rx et tx.
+et de facto il y des sleep. 
+Ces pauses impactaient la réactivitée quelques fois de la détectection rx et tx.
 
 Un portage en python3 diminuerait grandement l'occupation cpu même si celle-ci demeure très basse ...
