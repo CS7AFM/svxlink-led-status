@@ -29,7 +29,8 @@ et remplacer XXXXX par votre call ex:F4XYZ
 
 vous pouvez tester le bon fonctionnement avant d'aller plus loin :
 
-cd /home 
+cd /home
+
 bash led.sh
 bash svxstatut.sh
 
