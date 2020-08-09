@@ -35,7 +35,7 @@ chmod +x led.sh
 chmod +x svxstatut.sh
 
 il convient d'éditer le ficher led.sh à la ligne n°50
-et remplacer XXXXX par votre call ex:F4XYZ
+et remplacer XXXXX par votre call ex: F4XYZ H
 
 (la prochaine version ira récupérer directement le call dans /etc/spotnik/config.json ...)
 
