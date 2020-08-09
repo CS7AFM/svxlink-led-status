@@ -44,7 +44,7 @@ fi
 
 # on récupère le callsign en TX
  TX=^$(tail -1 /tmp/svxlink.log)
- VAR2=${RX:61}
+ VAR2=${        TX:61}
  if [[ "$VAR2" =~ "F5SWB H" ]]
  then
     echo 1 > /sys/class/gpio/gpio$LED1/value
