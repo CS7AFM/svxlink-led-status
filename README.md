@@ -9,9 +9,9 @@
 <img src = "https://github.com/f5swb/svxlink-led-status/blob/master/branchement github.png" title = "branchement">
 
 
-led verte gpio 27
+led verte gpio 22
 
-led rouge gpio 22
+led rouge gpio 27
 
 led orange clignotante gpio 23
 
