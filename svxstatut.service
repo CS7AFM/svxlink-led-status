@@ -1,0 +1,10 @@
+[Unit]
+Description=observe le statut de svxlink
+
+[Service]
+Type=simple
+ExecStart=/home/svxstatut.sh
+
+
+[Install]
+WantedBy=multi-user.target

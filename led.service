@@ -1,0 +1,10 @@
+[Unit]
+Description=Affiche led rouge et led verte
+
+[Service]
+Type=simple
+ExecStart=/home/led.sh
+
+
+[Install]
+WantedBy=multi-user.target
