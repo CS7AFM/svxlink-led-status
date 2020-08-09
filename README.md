@@ -6,7 +6,7 @@
 
 1 - le branchement des leds :
 
-<img src = "https://github.com/f5swb/svxlink-led-status/blob/master/branchement github.PNG" title = "branchement">
+<img src = "https://github.com/f5swb/svxlink-led-status/blob/master/branchement github.png" title = "branchement">
 
 
 led verte gpio 27
