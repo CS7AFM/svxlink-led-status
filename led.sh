@@ -27,7 +27,7 @@ echo 0 > /sys/class/gpio/gpio$LED2/value
 VARCALL=^$(head -n 2 /etc/spotnik/config.json | tail -n 1) ; CALL=${VARCALL:16:5}
 
 # ici on lance une boucle 
-# on ouvre svxlink.log et l'on récupère l'état ON ou OFF
+# on ouvre svxlink.log et on récupère l'état ON ou OFF
 while true;
  do RX=^$(tail -1 /tmp/svxlink.log)
  VAR1=${RX:56}
