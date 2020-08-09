@@ -23,7 +23,7 @@ echo 0 > /sys/class/gpio/gpio$LED1/value
 echo out > /sys/class/gpio/gpio$LED2/direction
 echo 0 > /sys/class/gpio/gpio$LED2/value
 
-# ici on récupère le call
+# ici on récupère le call, si le call est > 5 caractères il faut modifier comme ceci : CALL=${VARCALL:16:6}
 VARCALL=^$(head -n 2 /etc/spotnik/config.json | tail -n 1) ; CALL=${VARCALL:16:5}
 
 # ici on lance une boucle
@@ -42,7 +42,7 @@ while true;
     fi
 fi
 
-# on récupère le callsign en TX
+# on récupère le callsign en TX si le call est > 5 caractères il faut modifier comme ceci : VAR2=${TX:61:6}
  TX=^$(tail -1 /tmp/svxlink.log)
  VAR2=${TX:61:5}
  if [[ "$VAR2" = "$CALL" ]]
