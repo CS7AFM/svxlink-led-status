@@ -23,13 +23,12 @@ echo 0 > /sys/class/gpio/gpio$LED1/value
 echo out > /sys/class/gpio/gpio$LED2/direction
 echo 0 > /sys/class/gpio/gpio$LED2/value
 
+# ici on récupère le call
+VARCALL=^$(head -n 2 /etc/spotnik/config.json | tail -n 1) ; CALL=${VARCALL:16:5}
 
 # ici on lance une boucle 
 # on ouvre svxlink.log et l'on récupère l'état ON ou OFF
-
 while true;
-
-
  do RX=^$(tail -1 /tmp/svxlink.log)
  VAR1=${RX:56}
  if [[ "$VAR1" =~ "ON" ]]
@@ -44,8 +43,8 @@ fi
 
 # on récupère le callsign en TX
  TX=^$(tail -1 /tmp/svxlink.log)
- VAR2=${        TX:61}
- if [[ "$VAR2" =~ "F5SWB H" ]]
+ VAR2=${TX:61}
+ if [[ "$VAR2" = "$CALL" ]]
  then
     echo 1 > /sys/class/gpio/gpio$LED1/value
     else
