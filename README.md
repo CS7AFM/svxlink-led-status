@@ -1,83 +1,81 @@
 # svxlink-led-status
 
-2 scripts en bash qui vous permettront de suivre :
-- le statut de svxlink (led orange clignotante - actif ou stoppé)
-- le trafic rx et tx de svxlink ( led verte rx et led rouge tx)
+2 scripts in bash which will allow you to follow:
+- svxlink status (flashing orange led - active or stopped)
+- the rx and tx traffic of svxlink (green led rx and red led tx)
 
-1 - le branchement des leds :
+1 - the connection of the leds:
 
-<img src = "https://github.com/f5swb/svxlink-led-status/blob/master/branchement github.png" title = "branchement">
+<img src = "https://github.com/f5swb/svxlink-led-status/blob/master/branchement github.png" title = "branch">
 
 
-led verte gpio 22
+green led gpio 22
 
-led rouge gpio 27
+red led gpio 27
 
-led orange clignotante gpio 23
+flashing orange led gpio 23
 
-libre à vous de changer les gpio mais vous devrez modifier les scripts bash.
+You are free to change the gpio but you will have to modify the bash scripts.
 
-si vous souhaiter augmenter ou diminuer la vitesse de clignotement 
-il suffit d'éditer le script svxstatut.sh et de vous rendre :
+if you want to increase or decrease the flashing speed
+just edit the svxstatut.sh script and go:
+# illumination time
+# extinction time
 
-ligne n°24 = temps d'illumination 
+**2 - copy files and test for proper operation**
 
-ligne n°26 = temps d'extinction 
+led.sh and svxstatut.sh will be copied to /home/pi/svxlink
 
-2 - copie des fichiers et test de bon fonctionnement
+then make them executable:
 
-led.sh et svxstatut.sh seront copiés dans /home/pi/svxlink
+chmod + x led.sh
 
-puis les rendre exécutables :
+chmod + x svxstatut.sh
 
-chmod +x led.sh
+you can test the correct operation before going any further:
 
-chmod +x svxstatut.sh
-
-vous pouvez tester le bon fonctionnement avant d'aller plus loin :
-
-cd /home
+cd / home
 
 bash led.sh
 
 bash svxstatut.sh
 
-3 - installation des services :
+3 - installation of services:
 
-Les scripts seront alors lancés en mode service avec system.d:
+The scripts will then be launched in service mode with system.d:
 
-copier les deux fichiers led.service et svxstatut.service dans /etc/systemd/system
+copy the two files led.service and svxstatut.service in / etc / systemd / system
 
-pour les activer : 
+to activate them:
 
-sudo systemctl enable led.service 
+sudo systemctl enable led.service
 
 sudo systemctl enable svxstatut.service
 
-puis 
+then
 
-sudo systemctl start led.service 
+sudo systemctl start led.service
 
 sudo systemctl start svxstatut.service
 
-pour controler le bon fonctionnement :
+to check correct operation:
 
-sudo systemctl statut led.service 
+sudo systemctl status led.service
 
-sudo systemctl statut svxstatut.service
+sudo systemctl status svxstatut.service
 
- Commentaires : deux scripts au lieu d'un seul ?
+ Comments: two scripts instead of one?
  
-Le script svxstatut.sh en plus de controler l'état du process de svxlink fait clignoter une led
-et de facto il y des sleep.
+The svxstatut.sh script in addition to controlling the state of the svxlink process flashes a led
+and de facto there is sleep.
 
-Ces pauses impactaient la réactivitée quelques fois de la détectection rx et tx.
+These pauses impacted the reactivity of the rx and tx detection a few times.
 
-Et, enfin certains pourraient se demander pourquoi ne pas lire directement l'état des gpio de svxlink afin de savoir si l'on est en rx ou tx ?
+And, finally some might wonder why not directly read the state of the svxlink gpio in order to know if one is in rx or tx?
 
-Pour deux raisons, la première est que mon système est quelque peu différents pour la gestion tx et rx, et la deuxième est toute simple comme vous pourrez le constater dans les commentaires dans les scripts : 
+For two reasons, the first is that my system is somewhat different for tx and rx handling, and the second is quite simple as you can see in the comments in the scripts:
 
-on y apprend beaucoup de notions et de commandes ;)
+we learn a lot of concepts and commands;)
 
 
-Un portage en python3 diminuerait grandement l'occupation cpu même si celle-ci demeure très basse ...
+A port to python3 would greatly reduce the cpu occupancy even if it remains very low ...
