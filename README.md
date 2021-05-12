@@ -6,7 +6,7 @@
 
 #### Connecting the leds:
 
-<img src = "https://github.com/f5swb/svxlink-led-status/blob/master/branchement github.png" title = "branch">
+<img src = "https://github.com/knologys/svxlink-led-status/blob/master/branchement%20github.png" title = "branch">
 
 ```
 green led gpio 22
