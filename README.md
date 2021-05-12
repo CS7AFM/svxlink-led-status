@@ -26,7 +26,7 @@ ligne n°26 = temps d'extinction
 
 2 - copie des fichiers et test de bon fonctionnement
 
-led.sh et svxstatut.sh seront copiés dans /home
+led.sh et svxstatut.sh seront copiés dans /home/pi/svxlink
 
 puis les rendre exécutables :
 
