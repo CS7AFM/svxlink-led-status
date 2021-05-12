@@ -30,7 +30,7 @@ VARCALL=^$(head -n 2 /etc/spotnik/config.json | tail -n 1) ; CALL=${VARCALL:16:5
 # on ouvre svxlink.log et on récupère l'état ON ou OFF
 while true;
 
- do RX=^$(tail -1 /tmp/svxlink.log)
+ do RX=^$(tail -1 /var/log/svxlink)
  VAR1=${RX:56}
  if [[ "$VAR1" =~ "ON" ]]
  then
@@ -43,7 +43,7 @@ while true;
 fi
 
 # on récupère le callsign en TX si le call est > 5 caractères il faut modifier comme ceci : VAR2=${TX:61:6}
- TX=^$(tail -1 /tmp/svxlink.log)
+ TX=^$(tail -1 /var/log/svxlink)
  VAR2=${TX:61:5}
  if [[ "$VAR2" = "$CALL" ]]
  then
