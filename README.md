@@ -27,8 +27,8 @@ sudo nano svxstatut.sh
 
 ```
 cd /home/pi/svxlink
-wget 
-unzip xpto
+wget https://github.com/knologys/svxlink-led-status/archive/refs/heads/master.zip
+unzip master.zip
 ```
 
 #### Make bach files executable:
