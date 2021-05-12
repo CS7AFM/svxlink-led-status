@@ -19,8 +19,8 @@ You are free to change the gpio but you will have to modify the bash scripts.
 
 if you want to increase or decrease the flashing speed
 just edit the svxstatut.sh script and go:
-# illumination time
-# extinction time
+illumination time
+extinction time
 
 **2 - copy files and test for proper operation**
 
