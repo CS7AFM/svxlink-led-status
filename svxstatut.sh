@@ -26,13 +26,11 @@ svxlink=$(ps -ef | grep svxlink | grep -v "grep" | wc -l)
 if [ $svxlink -eq 0 ]; # If process svxlink is not running
    then
     echo 0 > /sys/class/gpio/gpio$LED3/value
-    else
-    # timer illumination 	
+    else	
     echo 1  > /sys/class/gpio/gpio$LED3/value
-    sleep 2
-    #timer extinction
+    sleep 2 # timer illumination 
     echo 0 > /sys/class/gpio/gpio$LED3/value
-    sleep 0.4
+    sleep 0.4 #timer extinction
 fi
 
 
