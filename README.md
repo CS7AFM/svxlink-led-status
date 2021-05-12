@@ -4,16 +4,29 @@
 - svxlink status (flashing orange led - active or stopped)
 - the rx and tx traffic of svxlink (green led rx and red led tx)
 
-1 - the connection of the leds:
+## 1 - the connection of the leds:
 
 <img src = "https://github.com/f5swb/svxlink-led-status/blob/master/branchement github.png" title = "branch">
 
-
+```
 green led gpio 22
-
 red led gpio 27
-
 flashing orange led gpio 23
+```
+
+## Production
+
+### Install
+
+```
+ssh spotnik
+cd /opt/spotnik
+git clone https://github.com/spotnik-ham/gui.git
+cd gui
+make
+make start
+```
+
 
 You are free to change the gpio but you will have to modify the bash scripts.
 
