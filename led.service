@@ -3,7 +3,7 @@ Description=Affiche led rouge et led verte
 
 [Service]
 Type=simple
-ExecStart=/home/led.sh
+ExecStart=/home/pi/svxlink/led.sh
 
 
 [Install]
