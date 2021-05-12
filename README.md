@@ -4,7 +4,9 @@
 - svxlink status (flashing orange led - active or stopped)
 - the rx and tx traffic of svxlink (green led rx and red led tx)
 
-## 1 - Connection of the leds:
+#### Connecting the leds:
+
+<img src = "https://github.com/f5swb/svxlink-led-status/blob/master/branchement github.png" title = "branch">
 
 ```
 green led gpio 22
@@ -12,10 +14,8 @@ red led gpio 27
 flashing orange led gpio 23
 ```
 
-<img src = "https://github.com/f5swb/svxlink-led-status/blob/master/branchement github.png" title = "branch">
-
-
 You can use others gpio just modify the bash scripts (led.sh and svxstatut.sh)
+
 
 ```
 sudo nano led.sh
