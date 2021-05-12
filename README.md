@@ -22,9 +22,8 @@ sudo nano led.sh
 sudo nano svxstatut.sh
 ```
 
-## Production
 
-### Get files to svxlink directory
+#### Get files to svxlink directory
 
 ```
 cd /home/pi/svxlink
@@ -46,11 +45,7 @@ sudo bash led.sh
 sudo bash svxstatut.sh
 ```
 
-#### installation of services:
-
-##### The scripts will then be launched in service mode with system.d:
-
-Move the two files led.service and svxstatut.service to /etc/systemd/system
+#### Move the two files led.service and svxstatut.service to /etc/systemd/system
 
 ```
 sudo mv led.sh /etc/systemd/system
@@ -58,7 +53,7 @@ sudo svxstatut.sh /etc/systemd/system
 ```
 
 
-#### Enable the services
+#### Enable the startup services
 
 ```
 sudo systemctl enable led.service
