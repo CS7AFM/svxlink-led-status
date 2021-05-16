@@ -3,10 +3,10 @@
 # Improved by CS7AFM 2021
 
 # led green
-LED1=27
+LED1=22
 
 # led red
-LED2=22
+LED2=27
 
 cd /sys/class/gpio/
 
