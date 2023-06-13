@@ -27,8 +27,8 @@ sudo nano svxstatut.sh
 
 ```
 cd /home/pi/svxlink
-wget https://github.com/knologys/svxlink-led-status/archive/refs/heads/master.zip
-unzip master.zip
+sudo wget https://github.com/knologys/svxlink-led-status/archive/refs/heads/master.zip
+sudo unzip master.zip
 ```
 
 #### Make bach files executable:
@@ -49,7 +49,7 @@ sudo bash svxstatut.sh
 
 ```
 sudo mv led.sh /etc/systemd/system
-sudo svxstatut.sh /etc/systemd/system
+sudo mv svxstatut.sh /etc/systemd/system
 ```
 
 
