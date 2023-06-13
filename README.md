@@ -48,8 +48,8 @@ sudo bash svxstatut.sh
 #### Move the two files led.service and svxstatut.service to /etc/systemd/system
 
 ```
-sudo mv led.sh /etc/systemd/system
-sudo mv svxstatut.sh /etc/systemd/system
+sudo mv led.service /etc/systemd/system
+sudo mv svxstatut.service /etc/systemd/system
 ```
 
 
